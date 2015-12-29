@@ -6,14 +6,12 @@ use Illuminate\Database\Seeder;
 class PageTableSeeder extends Seeder {
     public function run() {
         $pages = [
-            ['Home', '/', 'home.png', 'ravuthz', 1, 1],
+            ['Home', '/', 'home.png', 'ravuthz', 1, 1, 0],
             ['Music', 'page/music', 'music.png', 'ravuthz', 2, 1],
             ['Video', 'page/video', 'video.png', 'ravuthz', 3, 1],
             ['Movie', 'page/movie', 'movie.png', 'ravuthz', 4, 1],
             ['About', 'page/about', 'about.png', 'ravuthz', 5, 1],
-            ['Contact', 'page/contact', 'contact.png', 'ravuthz', 6, 1],
-            ['Other', 'page/other', 'contact.png', 'ravuthz', 7, 1],
-            ['Hidden', 'page/hidden', 'contact.png', 'ravuthz', 8, 0]
+            ['Contact', 'page/contact', 'contact.png', 'ravuthz', 6, 1]
         ];
 
         $layouts = ['layout-1', 'layout-2', 'layout-3', 'layout-4', 'layout-5'];

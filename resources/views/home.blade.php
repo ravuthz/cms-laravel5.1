@@ -1,9 +1,22 @@
+<!-- Published on Friday 1st January 2016 -->
+<!--
+
+    Developers:
+        - Yo Vannaravuth
+        - Seth Yuth
+        - Sai Vichet
+        - Ke Bunramy
+
+-->
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{!! Lang::get('site.title') !!}</title>
+<title>KhmerSites - {!! Lang::get('site.title') !!}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A small website to collect some news, entertainment, video ... in one site">
+<meta name="keywords" content="KhmerSites, Khmer, Sites, Ravuthz">
+<meta name="author" content="Ravuthz">
 
 <!-- CSS
 ================================================== -->
@@ -83,47 +96,13 @@ $(window).load(function(){
             <div class="navbar hidden-phone">
             <?php $menus = App\Page::listOn();?>
             <ul class="nav">
-            @if (!empty($menus))
-                @foreach ($menus as $k => $v)
-                    <li class="{{Request::is($k) ? 'active' : ''}}">
-                        <a href="{{url($k)}}">{{$v}}</a>
-                    </li>
-                @endforeach
-            @endif
-            {{-- <li class="dropdown active">
-                <a href="{{url()}}">Home</b></a>
-            </li> --}}
-           {{-- <li><a href="features.htm">Features</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="page-full-width.htm">Full Width</a></li>
-                    <li><a href="page-right-sidebar.htm">Right Sidebar</a></li>
-                    <li><a href="page-left-sidebar.htm">Left Sidebar</a></li>
-                    <li><a href="page-double-sidebar.htm">Double Sidebar</a></li>
-                </ul>
-            </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Gallery <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="gallery-3col.htm">Gallery 3 Column</a></li>
-                    <li><a href="gallery-4col.htm">Gallery 4 Column</a></li>
-                    <li><a href="gallery-6col.htm">Gallery 6 Column</a></li>
-                    <li><a href="gallery-4col-circle.htm">Gallery 4 Round</a></li>
-                    <li><a href="gallery-single.htm">Gallery Single</a></li>
-                </ul>
-             </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Blog <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="blog-style1.htm">Blog Style 1</a></li>
-                    <li><a href="blog-style2.htm">Blog Style 2</a></li>
-                    <li><a href="blog-style3.htm">Blog Style 3</a></li>
-                    <li><a href="blog-style4.htm">Blog Style 4</a></li>
-                    <li><a href="blog-single.htm">Blog Single</a></li>
-                </ul>
-             </li>
-             <li><a href="page-contact.htm">Contact</a></li> --}}
+                @if (!empty($menus))
+                    @foreach ($menus as $k => $v)
+                        <li class="{{Request::is($k) ? 'active' : ''}}">
+                            <a href="{{url($k)}}">{{$v}}</a>
+                        </li>
+                    @endforeach
+                @endif
             </ul>
 
             </div>
@@ -134,9 +113,9 @@ $(window).load(function(){
                     <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
                         @if (!empty($menus))
                             @foreach ($menus as $k => $v)
-                                <option value="{{url($k)}}"
-                                {{Request::is($k) ? 'selected' : ''}}
-                                >{{$v}}</option>
+                                <option value="{{url($k)}}" {{Request::is($k) ? 'selected' : ''}}>
+                                    {{$v}}
+                                </option>
                             @endforeach
                         @endif
                     </select>
