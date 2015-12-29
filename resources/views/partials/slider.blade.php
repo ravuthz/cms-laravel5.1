@@ -1,6 +1,6 @@
 <div class="row headline"><!-- Begin Headline -->
-    <!-- Slider Carousel
-    ================================================== -->
+    <!-- Slider Carousel -->
+    @if (!empty($slides))
     <div class="span8">
         <div class="flexslider">
           <ul class="slides">
@@ -14,10 +14,13 @@
           </ul>
         </div>
     </div>
+    @endif
 
-    <div class="span4">
-        <h3>{{$post->title}}</h3>
-        <p class="lead">{{$post->content}}</p>
-        <a href="#"><i class="icon-plus-sign"></i>Read More</a>
-    </div>
+    @if (!empty($post))
+        <div class="span4">
+            <h3>{{$post->title}}</h3>
+            <p class="lead">{{$post->content}}</p>
+            <a href="#"><i class="icon-plus-sign"></i>Read More</a>
+        </div>
+    @endif
 </div>
