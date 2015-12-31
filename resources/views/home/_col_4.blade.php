@@ -17,7 +17,7 @@
                         </a>
                         <span class="project-details">
                             <a href="{{url('post/' . $post->slug)}}">{{$post->title}}</a>
-                            {!! $post->content !!}
+                            {{$post->content}}
                         </span>
                     </li>
                 @endforeach
