@@ -17,8 +17,7 @@
 <meta name="keywords" content="{!! Lang::get('site.keywords') !!}">
 <meta name="author" content="{!! Lang::get('site.author') !!}">
 
-<!-- CSS
-================================================== -->
+<!-- CSS  -->
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{url('assets/css/bootstrap.css')}}">
 <link rel="stylesheet" href="{{url('assets/css/bootstrap-responsive.css')}}">
@@ -31,15 +30,13 @@
     <link rel="stylesheet" href="{{url('assets/css/style-ie.css')}}"/>
 <![endif]-->
 
-<!-- Favicons
-================================================== -->
+<!-- Favicons  -->
 <link rel="shortcut icon" href="{{url('assets/img/favicon.ico')}}">
 <link rel="apple-touch-icon" href="{{url('assets/img/apple-touch-icon.png')}}">
 <link rel="apple-touch-icon" sizes="72x72" href="{{url('assets/img/apple-touch-icon-72x72.png')}}">
 <link rel="apple-touch-icon" sizes="114x114" href="{{url('assets/img/apple-touch-icon-114x114.png')}}">
 
-<!-- JS
-================================================== -->
+<!-- JS  -->
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="{{url('assets/js/bootstrap.js')}}"></script>
 <script src="{{url('assets/js/jquery.prettyPhoto.js')}}"></script>
