@@ -3,7 +3,7 @@
 return [
     'favicon'             => 'assets/img/favicon.ico',
     'logo'                => 'assets/img/logo.png',
-    'title'               => 'Auto KhmerSites',
+    'title'               => 'Auto Update KhmerSites',
     'email'               => 'ravuthz@gmail.com',
     'phone'               => '+855 96 457 7770',
     'author'              => 'Ravuthz',
