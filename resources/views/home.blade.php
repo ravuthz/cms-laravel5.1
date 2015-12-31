@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{!! Lang::get('site.title') !!}{{ !empty($title) ? " - $title" : "" }}</title>
+<title>{!! Lang::get('site.title') !!}{{ " - $title"}}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{!! Lang::get('site.description') !!}">
 <meta name="keywords" content="{!! Lang::get('site.keywords') !!}">
