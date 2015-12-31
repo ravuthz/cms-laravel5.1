@@ -87,7 +87,7 @@ $(window).load(function(){
 
         <!-- Logo -->
         <div class="span5 logo">
-            <a href="index.htm"><img src="{{url('assets/img/piccolo-logo.png')}}" alt="" /></a>
+            <a href="{{url()}}"><img src="{{url('assets/img/piccolo-logo.png')}}" alt="" /></a>
             <h5>Big Things... Small Packages</h5>
         </div>
 
