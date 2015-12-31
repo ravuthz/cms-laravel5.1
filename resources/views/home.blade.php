@@ -1,6 +1,5 @@
 <!-- Published on Friday 1st January 2016 -->
 <!--
-
     Developers:
         - Yo Vannaravuth
         - Seth Yuth
@@ -14,9 +13,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>KhmerSites - {!! Lang::get('site.title') !!}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A small website to collect some news, entertainment, video ... in one site">
-<meta name="keywords" content="KhmerSites, Khmer, Sites, Ravuthz">
-<meta name="author" content="Ravuthz">
+<meta name="description" content="{!! Lang::get('site.description') !!}">
+<meta name="keywords" content="{!! Lang::get('site.keywords') !!}">
+<meta name="author" content="{!! Lang::get('site.author') !!}">
 
 <!-- CSS
 ================================================== -->
@@ -47,7 +46,7 @@
 <script src="{{url('assets/js/jquery.flexslider.js')}}"></script>
 <script src="{{url('assets/js/jquery.custom.js')}}"></script>
 <script type="text/javascript">
-$(document).ready(function () {
+$(function(){
     $("#btn-blog-next").click(function () {
         $('#blogCarousel').carousel('next')
     });
@@ -82,58 +81,55 @@ $(window).load(function(){
     <div class="color-bar-2 color-bg"></div>
 
     <div class="container">
+        <div class="row header"><!-- Begin Header -->
 
-      <div class="row header"><!-- Begin Header -->
+            <!-- Logo -->
+            <div class="span5 logo">
+                <a href="{{url()}}"><img src="{{url('assets/img/piccolo-logo.png')}}" alt="" /></a>
+                <h5>{!! Lang::get('site.slogan') !!}</h5>
+            </div>
 
-        <!-- Logo -->
-        <div class="span5 logo">
-            <a href="{{url()}}"><img src="{{url('assets/img/piccolo-logo.png')}}" alt="" /></a>
-            <h5>Big Things... Small Packages</h5>
-        </div>
+            <!-- Main Navigation -->
+            <div class="span7 navigation">
+                <div class="navbar hidden-phone">
+                <?php $menus = App\Page::listOn();?>
+                <ul class="nav">
+                    @if (!empty($menus))
+                        @foreach ($menus as $k => $v)
+                            <li class="{{Request::is($k) ? 'active' : ''}}">
+                                <a href="{{url($k)}}">{{$v}}</a>
+                            </li>
+                        @endforeach
+                    @endif
+                </ul>
 
-        <!-- Main Navigation -->
-        <div class="span7 navigation">
-            <div class="navbar hidden-phone">
-            <?php $menus = App\Page::listOn();?>
-            <ul class="nav">
-                @if (!empty($menus))
-                    @foreach ($menus as $k => $v)
-                        <li class="{{Request::is($k) ? 'active' : ''}}">
-                            <a href="{{url($k)}}">{{$v}}</a>
-                        </li>
-                    @endforeach
-                @endif
-            </ul>
+                </div>
+
+                <!-- Mobile Nav -->
+                <form action="#" id="mobile-nav" class="visible-phone">
+                    <div class="mobile-nav-select">
+                        <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                            @if (!empty($menus))
+                                @foreach ($menus as $k => $v)
+                                    <option value="{{url($k)}}" {{Request::is($k) ? 'selected' : ''}}>
+                                        {{$v}}
+                                    </option>
+                                @endforeach
+                            @endif
+                        </select>
+                    </div>
+                </form>
 
             </div>
 
-            <!-- Mobile Nav -->
-            <form action="#" id="mobile-nav" class="visible-phone">
-                <div class="mobile-nav-select">
-                    <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-                        @if (!empty($menus))
-                            @foreach ($menus as $k => $v)
-                                <option value="{{url($k)}}" {{Request::is($k) ? 'selected' : ''}}>
-                                    {{$v}}
-                                </option>
-                            @endforeach
-                        @endif
-                    </select>
-                </div>
-            </form>
+        </div><!-- End Header -->
 
-        </div>
-
-    </div><!-- End Header -->
-
-    @yield('content')
+        @yield('content')
 
     </div> <!-- End Container -->
 
-    <!-- Footer Area
-        ================================================== -->
-
-    <div class="footer-container"><!-- Begin Footer -->
+    <!-- Footer Area -->
+    <div class="footer-container">
         <div class="container">
             <div class="row footer-row">
                 <div class="span3 footer-col">
@@ -152,7 +148,7 @@ $(window).load(function(){
                 </div>
                 <div class="span3 footer-col">
                     <h5>{!! Lang::get('site.lastest_tweets') !!}</h5>
-                    <ul>
+                    {{-- <ul>
                         <li>
                             <a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </li>
@@ -162,17 +158,18 @@ $(window).load(function(){
                         <li>
                             <a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
                 <div class="span3 footer-col">
                     <h5>{!! Lang::get('site.lastest_posts') !!}</h5>
-                     <ul class="post-list">
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Consectetur adipiscing elit est lacus gravida</a></li>
-                        <li><a href="#">Lectus sed orci molestie molestie etiam</a></li>
-                        <li><a href="#">Mattis consectetur adipiscing elit est lacus</a></li>
-                        <li><a href="#">Cras rutrum, massa non blandit convallis est</a></li>
+
+                    @if (!empty($lastest_posts))
+                    <ul class="post-list">
+                        @foreach ($lastest_posts as $post)
+                            <li><a href="{{url()}}">{{$post->title}}</a></li>
+                        @endforeach
                     </ul>
+                    @endif
                 </div>
                 <div class="span3 footer-col">
                     <h5>{!! Lang::get('site.gallery') !!}</h5>
@@ -210,7 +207,7 @@ $(window).load(function(){
             </div><!-- End Sub Footer -->
 
         </div>
-    </div><!-- End Footer -->
+    </div>
 
     <!-- Scroll to Top -->
     <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
