@@ -136,7 +136,7 @@ $(window).load(function(){
                         {!! Lang::get('site.address') !!}
                     </address>
                     <ul class="social-icons">
-                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="https://www.facebook.com/khmersites.page/" class="social-icon facebook"></a></li>
                         <li><a href="#" class="social-icon twitter"></a></li>
                         <li><a href="#" class="social-icon dribble"></a></li>
                         <li><a href="#" class="social-icon rss"></a></li>

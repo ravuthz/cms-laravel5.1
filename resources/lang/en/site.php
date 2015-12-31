@@ -9,7 +9,7 @@ return [
     'author'              => 'Ravuthz',
     'keywords'            => 'Khmer,Sites,KhmerSites,Ravuthz',
     'description'         => 'A small website that collect some musics, videos, movies, and news in Cambodia',
-    'slogan'              => 'All sites in one',
+    'slogan'              => 'Khmer websites at here',
     'newsletter'          => 'Newsletter',
     'subscribe'           => 'subscribe',
     'email_address_here'  => 'Enter e-mail here',
