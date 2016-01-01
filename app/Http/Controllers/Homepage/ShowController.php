@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class ShowController extends Controller {
     public function index() {
-        Str::limit(10, 'hello');
+        Str::limit('hello', 10);
         $data['posts'] = Post::getAll();
         $data['slides'] = [
             (object) ['src' => 'assets/img/gallery/slider-img-1.jpg', 'alt' => 'Slider', 'href' => 'gallery-single.htm', 'name' => 'test1'],
