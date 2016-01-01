@@ -22,8 +22,14 @@ return [
         ['name' => '', 'link' => '#', 'src' => 'assets/img/icon-4.png', 'alt' => 'assets/img/icon-4.png']
     ],
 
-    'contact' => 'Contact',
-    'address' => '<strong>Design Team</strong><br/>123 Main St, Suite 500<br/>New York, NY 12345<br />',
+    'contact'        => 'Contact',
+    'developer_team' => '<strong>Developer Team</strong><br/>
+                <ul>
+                    <li>Yo Vannaravuth</li>
+                    <li>Seth Yuth</li>
+                    <li>Sai Vichet</li>
+                    <li>Ke Bunnaray</li>
+                </ul>',
 
     'about'          => 'About Us',
     'gallery'        => 'Flickr Photos',

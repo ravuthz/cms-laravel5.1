@@ -122,9 +122,9 @@
                 <div class="span3 footer-col">
                     <h5>{!! Lang::get('site.about') !!}</h5>
                    <img src="{{url('assets/img/piccolo-footer-logo.png')}}" alt="Piccolo" /><br /><br />
-                    <address>
-                        {!! Lang::get('site.address') !!}
-                    </address>
+                    <div>
+                        {!! Lang::get('site.developer_team') !!}
+                    </div>
                     <ul class="social-icons">
                         <li><a href="https://www.facebook.com/khmersites.page/" class="social-icon facebook"></a></li>
                         <li><a href="#" class="social-icon twitter"></a></li>
