@@ -6,8 +6,8 @@
           <ul class="slides">
             @foreach ($slides as $slide)
                 <li>
-                    <a href="{{url($slide->href)}}">
-                        <img src="{{url($slide->src)}}" alt="{{$slide->alt}}" />
+                    <a href="{{ url($slide->href) }}">
+                        <img src="{{ url($slide->src) }}" alt="{{ $slide->alt }}" />
                     </a>
                 </li>
             @endforeach

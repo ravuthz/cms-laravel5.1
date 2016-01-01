@@ -2,9 +2,9 @@
 <div class="row">
     <div class="span8">
         @if (!empty($section1))
-            <h2>{{$section1->title}}</h2>
-            <p class="lead">{{$section1->content}}</p>
-            <h5 class="title-bg">{{$section1->subtitle}}</h5>
+            <h2>{!! $section1->title !!}</h2>
+            <p class="lead">{!! $section1->content !!}</p>
+            <h5 class="title-bg">{!! $section1->subtitle !!}</h5>
         @endif
 
         @if (!empty($section1->posts))
@@ -15,8 +15,8 @@
                 @endif
                 <div class="span2">
                     <img src="{{url('assets/img/gallery/gallery-img-1-6col.jpg')}}" alt="Image" class="thumbnail">
-                    <h5>{{$post->title}}</h5>
-                    <p>{{Illuminate\Support\Str::limit($post->content, 36)}}</p>
+                    <h5>{!! $post->title !!}</h5>
+                    <p>{!! Str::limit($post->content, 36) !!}</p>
                     <button class="btn btn-mini btn-inverse" type="button">Read more</button>
                 </div>
             @endforeach
