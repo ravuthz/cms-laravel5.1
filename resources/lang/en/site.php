@@ -24,12 +24,11 @@ return [
 
     'contact'        => 'Contact',
     'developer_team' => '<strong>Developer Team</strong><br/>
-                <ul>
-                    <li>Yo Vannaravuth</li>
-                    <li>Seth Yuth</li>
-                    <li>Sai Vichet</li>
-                    <li>Ke Bunnaray</li>
-                </ul>',
+        <br><a href="https://www.facebook.com/vutyo" title="manager">Yo Vannaravuth</a>
+        <br><a href="https://www.facebook.com/setyuth" title="developer">Seth Yuth</a>
+        <br><a href="https://www.facebook.com/aaron.renji.3" title="developer">Sai Vichet</a>
+        <br><a href="https://www.facebook.com/ramy.ke.9" title="developer">Ke Bunnaray</a>
+    ',
 
     'about'          => 'About Us',
     'gallery'        => 'Flickr Photos',
