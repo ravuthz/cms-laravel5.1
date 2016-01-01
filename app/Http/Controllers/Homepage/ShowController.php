@@ -17,7 +17,6 @@ class ShowController extends Controller {
             (object) ['src' => 'assets/img/gallery/slider-img-1.jpg', 'alt' => 'Slider', 'href' => 'gallery-single.htm', 'name' => 'test1']
         ];
         $data['post'] = Post::getLatest()->first();
-        $data = [];
         return view('home.index', $data);
     }
 

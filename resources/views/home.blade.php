@@ -72,7 +72,7 @@
 
             <!-- Logo -->
             <div class="span5 logo">
-                <a href="{{url()}}"><img src="{{ url('assets/img/logo.png') }}" alt="" /></a>
+                <a href="{{ url() }}"><img src="{{ url('assets/img/logo.png') }}" alt=""/></a>
                 <h5>{!! Lang::get('site.slogan') !!}</h5>
             </div>
 
