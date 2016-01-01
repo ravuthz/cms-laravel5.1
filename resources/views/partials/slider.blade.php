@@ -18,8 +18,8 @@
 
     @if (!empty($post))
         <div class="span4">
-            <h3>{{$post->title}}</h3>
-            <p class="lead">{{$post->content}}</p>
+            <h3>{{{ $post->title }}}</h3>
+            <p class="lead">{{{ $post->content }}}</p>
             <a href="#"><i class="icon-plus-sign"></i>Read More</a>
         </div>
     @endif
