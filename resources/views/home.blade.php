@@ -1,75 +1,65 @@
-<!-- Published on Friday 1st January 2016 -->
-<!--
-    Developers:
-        - Yo Vannaravuth
-        - Seth Yuth
-        - Sai Vichet
-        - Ke Bunramy
-
--->
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{!! Lang::get('site.title') !!}{{ !empty($title) ? " - $title" : "" }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{!! Lang::get('site.description') !!}">
-<meta name="keywords" content="{!! Lang::get('site.keywords') !!}">
-<meta name="author" content="{!! Lang::get('site.author') !!}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{!! Lang::get('site.title') !!}{{ !empty($title) ? " - $title" : "" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{!! Lang::get('site.description') !!}">
+    <meta name="keywords" content="{!! Lang::get('site.keywords') !!}">
+    <meta name="author" content="{!! Lang::get('site.author') !!}">
 
-<!-- CSS  -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{url('assets/css/bootstrap.css')}}">
-<link rel="stylesheet" href="{{url('assets/css/bootstrap-responsive.css')}}">
-<link rel="stylesheet" href="{{url('assets/css/prettyPhoto.css')}}" />
-<link rel="stylesheet" href="{{url('assets/css/flexslider.css')}}" />
-<link rel="stylesheet" href="{{url('assets/css/custom-styles.css')}}">
+    <!-- CSS  -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/bootstrap-responsive.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/prettyPhoto.css') }}" />
+    <link rel="stylesheet" href="{{ url('assets/css/flexslider.css') }}" />
+    <link rel="stylesheet" href="{{ url('assets/css/custom-styles.css') }}">
 
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js')}}"></script>
-    <link rel="stylesheet" href="{{url('assets/css/style-ie.css')}}"/>
-<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js')}}"></script>
+        <link rel="stylesheet" href="{{url('assets/css/style-ie.css')}}"/>
+    <![endif]-->
 
-<!-- Favicons  -->
-<link rel="shortcut icon" href="{{url('assets/img/favicon.ico')}}">
-<link rel="apple-touch-icon" href="{{url('assets/img/apple-touch-icon.png')}}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{url('assets/img/apple-touch-icon-72x72.png')}}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{url('assets/img/apple-touch-icon-114x114.png')}}">
+    <!-- Favicons  -->
+    <link rel="shortcut icon" href="{{ url('assets/img/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url('assets/img/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('assets/img/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('assets/img/apple-touch-icon-114x114.png') }}">
 
-<!-- JS  -->
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="{{url('assets/js/bootstrap.js')}}"></script>
-<script src="{{url('assets/js/jquery.prettyPhoto.js')}}"></script>
-<script src="{{url('assets/js/jquery.flexslider.js')}}"></script>
-<script src="{{url('assets/js/jquery.custom.js')}}"></script>
-<script type="text/javascript">
-$(function(){
-    $("#btn-blog-next").click(function () {
-        $('#blogCarousel').carousel('next')
-    });
-    $("#btn-blog-prev").click(function () {
-        $('#blogCarousel').carousel('prev')
-    });
+    <!-- JS  -->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="{{ url('assets/js/bootstrap.js') }}"></script>
+    <script src="{{ url('assets/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ url('assets/js/jquery.flexslider.js') }}"></script>
+    <script src="{{ url('assets/js/jquery.custom.js') }}"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btn-blog-next").click(function () {
+                $('#blogCarousel').carousel('next')
+            });
+            $("#btn-blog-prev").click(function () {
+                $('#blogCarousel').carousel('prev')
+            });
 
-    $("#btn-client-next").click(function () {
-        $('#clientCarousel').carousel('next')
-    });
-    $("#btn-client-prev").click(function () {
-        $('#clientCarousel').carousel('prev')
-    });
-});
+            $("#btn-client-next").click(function () {
+                $('#clientCarousel').carousel('next')
+            });
+            $("#btn-client-prev").click(function () {
+                $('#clientCarousel').carousel('prev')
+            });
+        });
 
-$(window).load(function(){
-    $('.flexslider').flexslider({
-        animation: "slide",
-        slideshow: true,
-        start: function(slider){
-            $('body').removeClass('loading');
-        }
-    });
-});
-</script>
-
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshow: true,
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body class="home">
@@ -82,7 +72,7 @@ $(window).load(function(){
 
             <!-- Logo -->
             <div class="span5 logo">
-                <a href="{{url()}}"><img src="{{url('assets/img/piccolo-logo.png')}}" alt="" /></a>
+                <a href="{{url()}}"><img src="{{ url('assets/img/logo.png') }}" alt="" /></a>
                 <h5>{!! Lang::get('site.slogan') !!}</h5>
             </div>
 
@@ -93,8 +83,8 @@ $(window).load(function(){
                 <ul class="nav">
                     @if (!empty($menus))
                         @foreach ($menus as $k => $v)
-                            <li class="{{Request::is($k) ? 'active' : ''}}">
-                                <a href="{{url($k)}}">{{$v}}</a>
+                            <li class="{{ Request::is($k) ? 'active' : '' }}">
+                                <a href="{{ url($k) }}">{{ $v }}</a>
                             </li>
                         @endforeach
                     @endif
@@ -108,8 +98,8 @@ $(window).load(function(){
                         <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
                             @if (!empty($menus))
                                 @foreach ($menus as $k => $v)
-                                    <option value="{{url($k)}}" {{Request::is($k) ? 'selected' : ''}}>
-                                        {{$v}}
+                                    <option value="{{ url($k) }}" {{ Request::is($k) ? 'selected' : '' }}>
+                                        {{ $v }}
                                     </option>
                                 @endforeach
                             @endif
@@ -163,7 +153,7 @@ $(window).load(function(){
                     @if (!empty($lastest_posts))
                     <ul class="post-list">
                         @foreach ($lastest_posts as $post)
-                            <li><a href="{{url()}}">{{$post->title}}</a></li>
+                            <li><a href="{{ url() }}">{{$post->title}}</a></li>
                         @endforeach
                     </ul>
                     @endif
@@ -173,8 +163,8 @@ $(window).load(function(){
                     <ul class="img-feed">
                         @foreach (App\Page::gallery() as $file)
                             <li>
-                                <a href="{{$file['href']}}">
-                                    <img src="{{url($file['src'])}}" alt="{{$file['alt']}}">
+                                <a href="{{ $file['href'] }}">
+                                    <img src="{{ url($file['src']) }}" alt="{{ $file['alt'] }}">
                                 </a>
                             </li>
                         @endforeach

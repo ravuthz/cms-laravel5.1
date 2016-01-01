@@ -1,9 +1,7 @@
 <?php
 
 return [
-    'favicon'             => 'assets/img/favicon.ico',
-    'logo'                => 'assets/img/logo.png',
-    'title'               => 'Auto Update KhmerSites',
+    'title'               => 'KhmerSites',
     'email'               => 'ravuthz@gmail.com',
     'phone'               => '+855 96 457 7770',
     'author'              => 'Ravuthz',
@@ -31,5 +29,4 @@ return [
     'gallery'        => 'Flickr Photos',
     'lastest_posts'  => 'Latest Posts',
     'lastest_tweets' => 'Latest Tweets'
-
 ];
