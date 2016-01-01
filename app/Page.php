@@ -33,6 +33,7 @@ class Page extends Model {
     }
 
     public static function getPostBy($slug = '', $status = 1) {
+        return App\Post::all()->paginate(self::POSTS_PER_PAGE);
         if (!empty($slug)) {
             $page = self::where(['slug' => "page/$slug", 'status' => $status])->first();
             if (!empty($page)) {
