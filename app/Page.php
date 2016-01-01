@@ -34,7 +34,10 @@ class Page extends Model {
 
     public static function getPostBy($slug = '', $status = 1) {
         if (!empty($slug)) {
-            return self::where(['slug' => "page/$slug", 'status' => $status])->first()->posts()->paginate(self::POSTS_PER_PAGE);
+            $page = self::where(['slug' => "page/$slug", 'status' => $status])->first();
+            if (!empty($page)) {
+                return $page->posts()->paginate(self::POSTS_PER_PAGE);
+            }
         }
         return self::where('status', $status)->first()->posts()->paginate(self::POSTS_PER_PAGE);
     }
